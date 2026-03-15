@@ -1,0 +1,52 @@
+/* Estilos para Alke Wallet */
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 40px; 
+    background-color: #e9ecef; 
+}
+
+.container { 
+    background: white; 
+    padding: 30px; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    max-width: 900px; 
+    margin: auto; 
+}
+
+h1 { 
+    color: #343a40; 
+    border-bottom: 3px solid #007bff; 
+    padding-bottom: 10px; 
+}
+
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 20px; 
+}
+
+th, td { 
+    padding: 15px; 
+    border: 1px solid #dee2e6; 
+    text-align: left; 
+}
+
+th { 
+    background-color: #007bff; 
+    color: white; 
+}
+
+tr:nth-child(even) { 
+    background-color: #f8f9fa; 
+}
+
+.btn-nuevo {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
