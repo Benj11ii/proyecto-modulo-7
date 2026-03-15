@@ -1,4 +1,4 @@
-from django.views.generic import ListView, CreateView, UpdateView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from .models import Cliente
 
@@ -18,4 +18,9 @@ class EditarClienteView(UpdateView):
     model = Cliente
     fields = ['nombre', 'email', 'telefono']
     template_name = 'gestion/cliente_form.html'
+    success_url = reverse_lazy('lista_clientes')
+    
+class EliminarClienteView(DeleteView):
+    model = Cliente
+    template_name = 'gestion/cliente_confirm_delete.html' # Página de confirmación
     success_url = reverse_lazy('lista_clientes')
