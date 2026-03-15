@@ -1,2 +1,12 @@
+# Entorno virtual
+venv/
+env/
+ENV/
+
+# Archivos de Python (compilados)
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos de sistema (el que vimos antes)
 .DS_Store
-**/.DS_Store
