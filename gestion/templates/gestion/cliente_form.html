@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Alke Wallet - Nuevo Cliente</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f0f2f5; }
+        .form-container { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); max-width: 500px; margin: auto; }
+        h1 { color: #1c1e21; margin-bottom: 20px; }
+        .btn { background-color: #007bff; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; text-decoration: none; }
+        .btn-cancel { background-color: #6c757d; margin-left: 10px; }
+        form p { margin-bottom: 15px; }
+        input { width: 100%; padding: 8px; box-sizing: border-box; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Agregar Nuevo Cliente</h1>
+        
+        <form method="post">
+            <!-- REQUISITO DE SEGURIDAD OBLIGATORIO (Pág. 13) -->
+            {% csrf_token %}
+            
+            {{ form.as_p }}
+            
+            <button type="submit" class="btn">Guardar Cliente</button>
+            <a href="{% url 'lista_clientes' %}" class="btn btn-cancel">Cancelar</a>
+        </form>
+    </div>
+</body>
+</html>
