@@ -139,3 +139,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# --- CONFIGURACIÓN DE LOGIN (Proyecto Alke Wallet) ---
+
+LOGIN_REDIRECT_URL = 'lista_clientes' # A donde va el cliente tras hacer login exitoso
+LOGOUT_REDIRECT_URL = 'login'   # A donde va el cliente al cerrar sesión
