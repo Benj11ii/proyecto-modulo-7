@@ -11,6 +11,10 @@
 <body>
     <div class="container">
         <h1>Listado de Clientes de Alke Wallet</h1>
+
+
+        <a href="{% url 'crear_cliente' %}" class="btn-nuevo">Agregar Nuevo Cliente</a>
+
         <table>
             <thead>
                 <tr>
@@ -28,7 +32,8 @@
                     <td>{{ cliente.telefono }}</td>
                     <td>
                         <a href="{% url 'editar_cliente' cliente.pk %}">Editar</a>
-                        <a href="{% url 'eliminar_cliente' cliente.pk %}" style="color: #dc3545; text-decoration: none; font-weight: bold;">Eliminar</a>
+                        <a href="{% url 'eliminar_cliente' cliente.pk %}"
+                            style="color: #dc3545; text-decoration: none; font-weight: bold;">Eliminar</a>
                     </td>
                 </tr>
                 {% empty %}
@@ -38,7 +43,15 @@
                 {% endfor %}
             </tbody>
         </table>
+        <br>
+        <hr>
+        <br>
+        <form method="post" action="{% url 'logout' %}" style="display: inline;">
+            {% csrf_token %}
+            <button type="submit" class="btn-logout">Cerrar sesión</button>
+        </form>
     </div>
+
 </body>
 
 </html>

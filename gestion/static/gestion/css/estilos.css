@@ -50,3 +50,17 @@ tr:nth-child(even) {
     border-radius: 5px;
     margin-bottom: 20px;
 }
+.btn-logout {
+    display: inline-block;
+    background-color: #dc3545; /* Rojo */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-left: 10px; /* Separación del otro botón */
+}
+
+.btn-logout:hover {
+    background-color: #a71d2a; /* Rojo más oscuro al pasar el mouse */
+}
